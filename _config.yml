@@ -1,0 +1,8 @@
+title: Shine636363.GitHub.com
+description: Jingjing Xiao's Home pages
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-minimal
+
+gems:
+  - jekyll-mentions
