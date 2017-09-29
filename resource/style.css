@@ -1,0 +1,140 @@
+﻿
+body {
+  font-family: "Lucida Sans Unicode","Lucida Grande","Lucida Sans",sans-serif;
+  line-height: 140%;  /*neater*/
+
+  color: #222222;
+  background-color: #ffffff;
+
+  text-align: center;  /*to center main container on some browsers*/
+}
+
+div.main {
+  width: 80%;  /*proportional width for most cases*/
+  min-width: 550px;  /*don't let it become too small*/
+  max-width: 1000px;  /*don't let it become too big*/
+
+  margin-left: auto;  /*center it*/
+  margin-right: auto;
+
+  text-align: left;  /*reset alignment*/
+}
+
+.center {  /*centered text*/
+  text-align: center;
+  padding-left: 0;  /*reset*/
+}
+
+.u {  /*underlined text*/
+  /*text-decoration: underline;*/
+  border-bottom: 1px dotted #222222;
+}
+
+.tg  {
+margin:auto;
+border-collapse:collapse;
+border-spacing:0;
+}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-color:#000000;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-color:#000000;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-n9at{font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif !important;;color:#3166ff;vertical-align:top}
+.tg .tg-jbiq{font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif !important;;color:#3166ff}
+.tg .tg-e1ec{font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif !important;;color:#fe0000;vertical-align:top}
+.tg .tg-733k{font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif !important;}
+.tg .tg-ump5{font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif !important;;vertical-align:top}
+.tg .tg-5l8t{font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif !important;;color:#fe0000}
+
+
+/*make h2 / h3 / p resemble a hierarchical structure*/
+h2 {
+  font-variant: small-caps;
+  padding-top: 1em;  /*separate from earlier paragraph*/
+}
+
+h3 {
+  font-variant: small-caps;
+  padding-left: 1em;
+  padding-top: 0.5em;  /*separate from earlier paragraph*/
+}
+
+p {
+  padding-left: 2em;
+  text-align: justify;
+}
+
+p.pub {
+  text-align: left;  /*not justified*/
+}
+
+/*nice tables and images*/
+img {
+  border: 0;
+}
+
+td {
+  line-height: 140%;  /*neater; need to set again for some browsers*/
+  vertical-align: middle;
+  border: 0;
+}
+
+
+/*header for news items*/
+span.news {
+  font-weight: bold;
+  text-align: right;
+
+  float: left;
+  width: 100px;
+  margin-right: 1em;
+}
+
+
+/*for table of individual projects*/
+td.thumb {
+  width: 100px;
+  padding: 0.5em;
+  padding-left: 2em;
+  margin-right: 1em;
+}
+
+img.thumb {
+  width: 100px;
+  height: 100px;
+}
+
+td.project {
+  padding: 0.5em;
+  text-align: justify;
+}
+
+div.ptitle {
+  font-weight: bold;
+  padding-bottom: 0.5em;
+}
+
+
+/*for embedded youtube videos*/
+iframe.youtube {
+  border: none;
+  display: block;
+  margin-left: auto;  /*centered*/
+  margin-right: auto;
+}
+
+
+/*downloadable files with icons, floatable*/
+div.file {
+  float: left;
+  width: 14em;
+  margin: 0.5em;
+}
+div.file img {  /*format the icon image*/
+  vertical-align: text-top;
+  width: 16px;
+  height: 19px;
+  margin-right: 8px;
+}
+
+div.after-files {  /*to close list of files*/
+  clear: left;
+}
