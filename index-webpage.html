@@ -1,0 +1,417 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<title>Jingjing Xiao</title>
+<link rel="stylesheet" href="./resource/style.css" type="text/css">
+<style>
+  p {padding-left: 0}  /*disable hierarchical structure for paragraphs*/
+</style>
+</head>
+
+<body>
+
+<div class="main">
+  
+<p class="center">
+<img src="./resource/UoB_small.jpg" alt="University of Birmingham" width="121px" height="108px" />
+<img src="./resource/RoMaNS.png" alt="Robotic Manipulation for Nuclear Sort and Segregation" width="439px" height="106px" />
+</p>
+
+<h2 class="center">Robust fusion of colour and depth data for RGB-D target tracking using adaptive range-invariant depth models and spatio-temporal consistency constraints</h2>
+<p class="center">Jingjing Xiao, Rustam Stolkin, Yuqing Gao, AlesˇLeonardis</p>
+
+<br />
+
+<p><b>Abstract</b></p>
+
+<p>This paper presents a novel robust method for single target tracking in RGB-D images, and also contributes a substantial new benchmark dataset for evaluating RGB-D trackers.While a target object’s colour distribution is reasonably motioninvariant,this is not true for the target’s depth distribution,which continually varies as the target moves relative to the camera. It is therefore non-trivial to design target models which can fully exploit (potentially very rich) depth information for target tracking. For this reason, much of the previous RGBD literature relies on colour information for tracking, while exploiting depth information only for occlusion reasoning. In contrast, we propose an adaptive range-invariant target depth model, and show how both depth and colour information can be fully and adaptively fused during the search for the target in each new RGB-D image. We introduce a new, hierarchical,two-layered target model (comprising local and global models) which uses spatio-temporal consistency constraints to achieve stable and robust on-the-fly target relearning. In the global layer, multiple features, derived from both colour and depth data, are adaptively fused to find a candidate target region. In ambiguous frames, where one or more features disagree, this global candidate region is further decomposed into smaller local candidate regions for matching to local-layer models of small target parts. We also note that conventional use of depth data, for occlusion reasoning, can easily trigger false occlusion detections when the target moves rapidly towards the camera. To overcome this problem, we show how combining target information with contextual information enables the target’s depth constraint to be relaxed. Our adaptively relaxed depth constraints can robustly accommodate large and rapid target motion in the depth direction, while still enabling the use of depth data for highly accurate reasoning about occlusions. For evaluation, we introduce a new RGB-D benchmark dataset with per-frame annotated attributes and extensive bias analysis. Our tracker is evaluated using two different state-of-the-art methodologies, VOT <a href="#id1">[1]</a> and VTB<a href="#id2">[2]</a>, and in both cases it significantly outperforms four other state-of-the-art RGB-D trackers from the literature.Index Terms—RGB-D tracking, range-invariant depth models,clustered decision tree.&nbsp;&nbsp;<a href="https://github.com/shine636363/RGBDtracker">[github link]</a></p>
+
+
+
+<p><b>Share your results for more citations!</b> Please email to: shine636363@sina.com</p>
+
+<br />
+<p><b>Dataset</b></p>
+
+<table class="ke-zeroborder" border="0" width="100%" align="center ">
+<tbody>
+<tr>
+<td align="center ">
+<div style="width:800px;height:300px;overflow:hidden;margin:auto;" id="demo">
+<table>
+<tbody>
+<tr>
+<td id="demo1">
+<table class="ke-zeroborder">
+<tbody>
+<tr>
+<td align="middle"><img src="resource/r_1.jpg"></td>
+<td align="middle"><img src="resource/r_2.jpg"></td>
+<td align="middle"><img src="resource/r_3.jpg"></td>
+<td align="middle"><img src="resource/r_4.jpg"></td>
+<td align="middle"><img src="resource/r_5.jpg"></td>
+<td align="middle"><img src="resource/r_6.jpg"></td>
+<td align="middle"><img src="resource/r_7.jpg"></td>
+<td align="middle"><img src="resource/r_8.jpg"></td>
+<td align="middle"><img src="resource/r_9.jpg"></td>
+<td align="middle"><img src="resource/l_1.jpg"></td>
+<td align="middle"><img src="resource/l_2.jpg"></td>
+<td align="middle"><img src="resource/l_3.jpg"></td>
+<td align="middle"><img src="resource/l_4.jpg"></td>
+<td align="middle"><img src="resource/l_5.jpg"></td>
+<td align="middle"><img src="resource/l_6.jpg"></td>
+<td align="middle"><img src="resource/l_7.jpg"></td>
+<td align="middle"><img src="resource/l_8.jpg"></td>
+<td align="middle"><img src="resource/l_9.jpg"></td>
+</tr>
+</tbody>
+</table>
+</td>
+<td id="demo2"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+
+<script>
+    var speed = 15
+    demo2.innerHTML = demo1.innerHTML
+    function Marquee() {
+        if (demo2.offsetWidth - demo.scrollLeft <= 0)
+            demo.scrollLeft -= demo1.offsetWidth
+        else {
+            demo.scrollLeft++
+        }
+    }
+    var MyMar = setInterval(Marquee, speed)
+    demo.onmouseover = function () { clearInterval(MyMar) }
+    demo.onmouseout = function () { MyMar = setInterval(Marquee, speed) }
+</script>
+
+
+
+<br />
+
+<p><b>Results</b></p>
+
+<table class="tg">
+  <tr>
+    <th class="tg-733k"></th>
+    <th class="tg-733k">Overall</th>
+    <th class="tg-733k">Stationary</th>
+    <th class="tg-733k">Moving</th>
+    <th class="tg-733k">IV</th>
+    <th class="tg-733k">DV</th>
+    <th class="tg-733k">SV</th>
+    <th class="tg-733k">CDV</th>
+    <th class="tg-ump5">DDV</th>
+    <th class="tg-ump5">SDC</th>
+    <th class="tg-ump5">SCC</th>
+    <th class="tg-ump5">BCC</th>
+    <th class="tg-ump5">BSC</th>
+    <th class="tg-ump5">PO</th>
+    <th class="tg-ump5">fps</th>
+  </tr>
+  <tr>
+    <td class="tg-733k">Ours</td>
+    <td class="tg-5l8t">8.36</td>
+    <td class="tg-5l8t">9.57</td>
+    <td class="tg-5l8t">7.18</td>
+    <td class="tg-5l8t"><span class="tg-jbiq">5.78</span></td>
+    <td class="tg-5l8t"><span class="tg-jbiq">7.56</span></td>
+    <td class="tg-5l8t">5.07</td>
+    <td class="tg-5l8t">5.12</td>
+    <td class="tg-e1ec">7.66</td>
+    <td class="tg-e1ec">8.01</td>
+    <td class="tg-e1ec"><span class="tg-n9at">9.53</span></td>
+    <td class="tg-e1ec">6.67</td>
+    <td class="tg-e1ec">7.17</td>
+    <td class="tg-e1ec"><span class="tg-n9at">7.73</span></td>
+    <td class="tg-e1ec"><span class="tg-733k">14.73</span></td>
+  </tr>
+  <tr>
+    <td class="tg-733k">DS-KCF*<a href="#id3">[3]</a></td>
+    <td class="tg-jbiq">8.21</td>
+    <td class="tg-jbiq">9.36</td>
+    <td class="tg-733k"><span class="tg-jbiq">7.13</span></td>
+    <td class="tg-733k"><span class="tg-5l8t">6.10</span></td>
+    <td class="tg-733k"><span class="tg-5l8t">7.88</span></td>
+    <td class="tg-733k"><span class="tg-jbiq">4.39</span></td>
+    <td class="tg-733k">0.94</td>
+    <td class="tg-ump5"><span class="tg-n9at">5.26</span></td>
+    <td class="tg-ump5"><span class="tg-n9at">7.93</span></td>
+    <td class="tg-n9at"><span class="tg-e1ec">9.81</span></td>
+    <td class="tg-733k"><span class="tg-733k">5.66</span></td>
+    <td class="tg-n9at">6.50</td>
+    <td class="tg-n9at"><span class="tg-e1ec">7.76</span></td>
+    <td class="tg-n9at">17.89</td>
+  </tr>
+  <tr>
+    <td class="tg-733k">PT <a href="#id3">[4]</a></td>
+    <td class="tg-733k"><span class="tg-733k">7.44</span></td>
+    <td class="tg-733k">8.54</td>
+    <td class="tg-733k">6.43</td>
+    <td class="tg-733k">4.15</td>
+    <td class="tg-733k">6.65</td>
+    <td class="tg-733k">2.80</td>
+    <td class="tg-733k">0.43</td>
+    <td class="tg-ump5">3.48</td>
+    <td class="tg-ump5">6.79</td>
+    <td class="tg-ump5">8.23</td>
+    <td class="tg-n9at">5.74</td>
+    <td class="tg-ump5">5.76</td>
+    <td class="tg-ump5">6.20</td>
+    <td class="tg-ump5">0.14</td>
+  </tr>
+  <tr>
+    <td class="tg-733k">DS-KCF<a href="#id4">[5]</a></td>
+    <td class="tg-733k">7.23</td>
+    <td class="tg-733k">7.52</td>
+    <td class="tg-733k">6.85</td>
+    <td class="tg-733k">5.50</td>
+    <td class="tg-733k">7.06</td>
+    <td class="tg-733k">3.36</td>
+    <td class="tg-733k">1.43</td>
+    <td class="tg-ump5">4.16</td>
+    <td class="tg-ump5">7.89</td>
+    <td class="tg-ump5">8.25</td>
+    <td class="tg-ump5">4.82</td>
+    <td class="tg-ump5">5.16</td>
+    <td class="tg-ump5">6.02</td>
+    <td class="tg-e1ec">20.95</td>
+  </tr>
+  <tr>
+    <td class="tg-733k">OAPF<a href="#id5">[6]</a></td>
+    <td class="tg-733k">5.24</td>
+    <td class="tg-733k">6.0</td>
+    <td class="tg-733k">4.54</td>
+    <td class="tg-733k">3.19</td>
+    <td class="tg-733k">4.45</td>
+    <td class="tg-733k">3.07</td>
+    <td class="tg-n9at">3.22</td>
+    <td class="tg-ump5">3.71</td>
+    <td class="tg-ump5">5.00</td>
+    <td class="tg-ump5">6.13</td>
+    <td class="tg-ump5">3.79</td>
+    <td class="tg-ump5">4.82</td>
+    <td class="tg-ump5">5.82</td>
+    <td class="tg-ump5">1.30</td>
+  </tr>
+</table>
+
+<p class="center">
+<i>Table 1 AUC OF BOUNDING-BOX OVERLAP</i>
+</p>
+
+<table class="tg">
+    <tr>
+        <th class="tg-733k" colspan="2"></th>
+        <th class="tg-733k">Overall</th>
+        <th class="tg-733k">Stationary</th>
+        <th class="tg-733k">Moving</th>
+        <th class="tg-733k">IV</th>
+        <th class="tg-733k">DV</th>
+        <th class="tg-733k">SV</th>
+        <th class="tg-733k">CDV</th>
+        <th class="tg-ump5">DDV</th>
+        <th class="tg-ump5">SDC</th>
+        <th class="tg-ump5">SCC</th>
+        <th class="tg-ump5">BCC</th>
+        <th class="tg-ump5">BSC</th>
+        <th class="tg-ump5">PO</th>
+    </tr>
+    <tr>
+        <td class="tg-733k" rowspan="2">Ours</td>
+        <td class="tg-733k">Fail.</td>
+        <td class="tg-e1ec">2.11</td>
+        <td class="tg-e1ec">1.56</td>
+        <td class="tg-e1ec">2.67</td>
+        <td class="tg-733k">0.11</td>
+        <td class="tg-e1ec">0.50</td>
+        <td class="tg-e1ec">0.19</td>
+        <td class="tg-e1ec">0.00</td>
+        <td class="tg-e1ec">0.25</td>
+        <td class="tg-e1ec">0.97</td>
+        <td class="tg-e1ec">0.22</td>
+        <td class="tg-e1ec">1.17</td>
+        <td class="tg-e1ec">0.67</td>
+        <td class="tg-e1ec">0.50</td>
+    </tr>
+    <tr>
+        <td class="tg-733k">Acc.</td>
+        <td class="tg-733k">0.52</td>
+        <td class="tg-733k">0.54</td>
+        <td class="tg-733k">0.50</td>
+        <td class="tg-733k">0.41</td>
+        <td class="tg-733k">0.49</td>
+        <td class="tg-733k">0.41</td>
+        <td class="tg-733k">0.46</td>
+        <td class="tg-733k">0.47</td>
+        <td class="tg-733k">0.52</td>
+        <td class="tg-733k">0.52</td>
+        <td class="tg-733k">0.49</td>
+        <td class="tg-733k">0.50</td>
+        <td class="tg-733k">0.46</td>
+    </tr>
+    <tr>
+      <td rowspan="2" class="tg-733k">DS-KCF*<a href="#id3">[3]</a></td>
+      <td class="tg-733k">Fail.</td>
+      <td class="tg-n9at">2.69</td>
+      <td class="tg-n9at">2.50</td>
+      <td class="tg-n9at">2.89</td>
+      <td class="tg-e1ec">0.06</td>
+      <td class="tg-733k">0.78</td>
+      <td class="tg-n9at">0.22</td>
+      <td class="tg-n9at">0.03</td>
+      <td class="tg-733k">0.36</td>
+      <td class="tg-733k">1.44</td>
+      <td class="tg-n9at">0.69</td>
+      <td class="tg-733k">1.67</td>
+      <td class="tg-n9at">1.28</td>
+      <td class="tg-n9at">0.58</td>
+    </tr>
+    <tr>
+      <td class="tg-733k">Acc.</td>
+      <td class="tg-733k">0.50</td>
+      <td class="tg-733k">0.51</td>
+      <td class="tg-733k">0.50</td>
+      <td class="tg-733k">0.48</td>
+      <td class="tg-733k">0.49</td>
+      <td class="tg-733k">0.46</td>
+      <td class="tg-733k">0.41</td>
+      <td class="tg-733k">0.53</td>
+      <td class="tg-733k">0.44</td>
+      <td class="tg-733k">0.43</td>
+      <td class="tg-733k">0.57</td>
+      <td class="tg-733k">0.57</td>
+      <td class="tg-733k">0.49</td>
+    </tr>
+    <tr>
+      <td rowspan="2" class="tg-733k">PT <a href="#id3">[4]</a></td>
+        <td class="tg-733k">Fail.</td>
+        <td class="tg-733k">10.61</td>
+        <td class="tg-733k">8.61</td>
+        <td class="tg-733k">12.61</td>
+        <td class="tg-733k">0.33</td>
+        <td class="tg-733k">3.14</td>
+        <td class="tg-733k">1.42</td>
+        <td class="tg-733k">0.19</td>
+        <td class="tg-733k">1.03</td>
+        <td class="tg-733k">5.78</td>
+        <td class="tg-733k">2.33</td>
+        <td class="tg-733k">4.31</td>
+        <td class="tg-733k">3.83</td>
+        <td class="tg-733k">3.61</td>
+    </tr>
+    <tr>
+      <td class="tg-733k">Acc.</td>
+        <td class="tg-733k">0.64</td>
+        <td class="tg-733k">0.63</td>
+        <td class="tg-733k">0.64</td>
+        <td class="tg-733k">0.53</td>
+        <td class="tg-733k">0.65</td>
+        <td class="tg-733k">0.55</td>
+        <td class="tg-733k">0.60</td>
+        <td class="tg-733k">0.65</td>
+        <td class="tg-733k">0.62</td>
+        <td class="tg-733k">0.62</td>
+        <td class="tg-733k">0.64</td>
+        <td class="tg-733k">0.63</td>
+        <td class="tg-733k">0.57</td>
+    </tr>
+    <tr>
+        <td class="tg-733k" rowspan="2">DS-KCF<a href="#id4">[5]</a></td>
+        <td class="tg-733k">Fail.</td>
+        <td class="tg-733k">3.36</td>
+        <td class="tg-733k">3.00</td>
+        <td class="tg-733k">3.72</td>
+        <td class="tg-jbiq">0.08</td>
+        <td class="tg-jbiq">0.64</td>
+        <td class="tg-733k">0.28</td>
+        <td class="tg-jbiq">0.03</td>
+      <td class="tg-jbiq">0.31</td>
+      <td class="tg-jbiq">1.39</td>
+        <td class="tg-733k">0.92</td>
+        <td class="tg-jbiq">1.56</td>
+        <td class="tg-733k">1.47</td>
+        <td class="tg-733k">1.11</td>
+    </tr>
+    <tr>
+        <td class="tg-733k">Acc.</td>
+        <td class="tg-733k">0.56</td>
+        <td class="tg-733k">0.56</td>
+        <td class="tg-733k">0.47</td>
+        <td class="tg-733k">0.50</td>
+        <td class="tg-733k">0.56</td>
+        <td class="tg-733k">0.48</td>
+        <td class="tg-733k">0.54</td>
+        <td class="tg-733k">0.58</td>
+        <td class="tg-733k">0.55</td>
+        <td class="tg-733k">0.52</td>
+        <td class="tg-733k">0.53</td>
+        <td class="tg-733k">0.51</td>
+        <td class="tg-733k">0.54</td>
+    </tr>
+    <tr>
+        <td class="tg-733k" rowspan="2">OAPF<a href="#id5">[6]</a></td>
+        <td class="tg-733k">Fail.</td>
+        <td class="tg-733k">5.78</td>
+        <td class="tg-733k">3.72</td>
+        <td class="tg-733k">7.83</td>
+        <td class="tg-733k">0.19</td>
+        <td class="tg-733k">1.42</td>
+        <td class="tg-733k">0.50</td>
+        <td class="tg-733k">0.11</td>
+        <td class="tg-733k">0.61</td>
+        <td class="tg-733k">2.75</td>
+        <td class="tg-733k">1.36</td>
+        <td class="tg-733k">2.61</td>
+        <td class="tg-733k">1.86</td>
+        <td class="tg-733k">1.47</td>
+    </tr>
+    <tr>
+        <td class="tg-733k">Acc.</td>
+        <td class="tg-733k">0.35</td>
+        <td class="tg-733k">0.37</td>
+        <td class="tg-733k">0.33</td>
+        <td class="tg-733k">0.25</td>
+        <td class="tg-733k">0.32</td>
+        <td class="tg-733k">0.25</td>
+        <td class="tg-733k">0.22</td>
+        <td class="tg-733k">0.27</td>
+        <td class="tg-733k">0.35</td>
+        <td class="tg-733k">0.36</td>
+        <td class="tg-733k">0.32</td>
+        <td class="tg-733k">0.35</td>
+        <td class="tg-733k">0.33</td>
+    </tr>
+</table>
+
+
+<p class="center">
+    <i>Table 2  VVOT PROTOCOL RESULTS</i>
+</p>
+
+<br />
+
+        <p><b>Acknowledgement</b></p>
+
+        <p>This work was funded by EU H2020 RoMaNS 645582. It was also partially supported by EPSRC EP/M026477/1 and the National Key Research and Development Program of China,No. 2016YFC0103100. We also acknowledge MoD/Dstl and EPSRC for providing the grant to support the UK academics (Aleˇs Leonardis) involvement in a Department of Defense funded MURI project. We also want to thank for the great help from Heng Yang for the insightful discussions.</p>
+
+        <p><b>Reference</b></p>
+
+        <div id="id1">[1] M. Kristan, J. Matas, A. Leonardis, T. Vojir, R. Pflugfelder, G. Fernandez, G. Nebehay, F. Porikli, and L. Cehovin. A novel performance evaluation methodology for single-target trackers. PAMI, 2015.</div>
+        <div id="id2">[2] Y. Wu, J. Lim, and M.-H. Yang. Object tracking benchmark. PAMI, 2015.</div>
+        <div id="id3">[3] S. Hannuna, M. Camplani, J. Hall, M. Mirmehdi, D. Damen, T. Burghardt, A. Paiement, and L. Tao. Ds-kcf: a real-time tracker for rgb-d data. Journal of Real-Time Image Processing, pages 1–20, 2016.</div>
+        <div id="id4">[4] S. Song and J. Xiao. Tracking revisited using RGB-D camera: Unified benchmark and baselines. In ICCV, pages 233–240, 2013.</div>
+        <div id="id5">[5]M. Camplani, S. Hannuna, M. Mirmehdi, D. Damen, A. Paiement, L. Tao, and T. Burghardt. Real-time RGB-D tracking with depth scaling kernelised correlation filters and occlusion handling. In BMVC, 2015.</div>
+        <div id="id5"
+>[6]K. Meshgia, S.-i. Maedaa, S. Obaa, H. Skibbea, Y.-z. Lia, and S. Ishiia. Occlusion aware particle filter tracker to handle complex and persistent occlusions. CVIU, 2015.</div>
+
+</body>
+</html>
