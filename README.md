@@ -1,2 +1,2 @@
-# jingjing Xiao's home pages.github.com
+# Jingjing Xiao's home pages.github.com
 
