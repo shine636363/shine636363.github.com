@@ -64,14 +64,25 @@
 				pie = $this.data('pie');
 
 			// add/remove active class
-			$('.fh5co-tab-menu li').removeClass('active');
-			$this.closest('li').addClass('active');
-
-			$('.fh5co-tab-content.active').addClass('animated fadeOutDown');
+			if(data < 5){
+				$('.fh5co-tab-menu li').removeClass('active');
+				$this.closest('li').addClass('active');
+				$('.fh5co-tab-content.active').addClass('animated fadeOutDown');
+			}
 
 			setTimeout(function(){
-				$('.fh5co-tab-content.active').removeClass('active animated fadeOutDown fadeInUp');
-				$('.fh5co-tab-content[data-content="'+data+'"]').addClass('animated fadeInUp active');
+				if( data > 4){
+					$this.closest('.col-md-12').find('.fh5co-tab-content').removeClass('active animated fadeOutDown fadeInUp');	
+					$this.closest('.col-md-12').find('.fh5co-tab-content[data-content="'+data+'"]').addClass('animated fadeInUp active');
+				}else{
+					$('.fh5co-tab-content.active').removeClass('active animated fadeOutDown fadeInUp');
+					$('.fh5co-tab-content[data-content="'+data+'"]').addClass('animated fadeInUp active');
+				}
+				
+				
+				if(data === 3){
+					$('.fh5co-tab-content[data-content="'+data+'"]').find(".fh5co-tab-content:first").addClass('animated fadeInUp active');
+				}
 				getHeight();
 			}, 500);
 

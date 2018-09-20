@@ -231,6 +231,7 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width: 1000px) {
   .fh5co-tab-wrap .fh5co-tab-content .fh5co-content-inner {
     padding: 4em .5em 5em .5em;
+	position: relative;
   }
 }
 
