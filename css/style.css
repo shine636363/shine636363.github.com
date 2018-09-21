@@ -154,6 +154,8 @@ h1, h2, h3, h4, h5, h6 {
     padding: 1em .5em .5em .5em;
   }
 }
+
+
 .fh5co-tab-wrap .fh5co-tab-menu li a:after {
   position: absolute;
   content: "";
@@ -223,7 +225,7 @@ h1, h2, h3, h4, h5, h6 {
   visibility: visible;
 }
 .fh5co-tab-wrap .fh5co-tab-content .fh5co-content-inner {
-  padding: 7em 2em 5em 2em;
+  padding: 10em 2em 5em 2em;
   float: left;
   width: 100%;
   position: relative;
@@ -325,7 +327,7 @@ figure {
 }
 .fh5co-feature .fh5co-icon {
   float: left;
-  width: 10%;
+  width: 14%;
   display: block;
   margin-top: 5px;
 }
@@ -449,3 +451,23 @@ figure {
 }
 
 /*# sourceMappingURL=style.css.map */
+/*change*/
+.fh5co-tab-wrap .default-a li a{
+	padding:0;
+}
+.fh5co-tab-wrap .default-a li{
+	/*width:50%;*/
+	display: block;
+	box-sizing: border-box;
+	text-align: left;
+	margin-bottom: 1em;
+}
+.fh5co-tab-wrap .default-a {
+	margin-top:3em
+}
+.fh5co-tab-wrap .fh5co-tab-content .padding-0{
+	padding-top: 1em;
+}
+.img-xw img{
+	margin-bottom: .5em;
+}

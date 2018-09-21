@@ -34,9 +34,19 @@
 			$('#fh5co-main').stop().animate({
 				'height': $('.fh5co-tab-content.active').height() + extraHeight
 			});
-		}, 200);
+		}, 50);//调整下拉速度
 	};
+	var getHeight2=function(){
+		var extraHeight = 0;
 
+		if ( isMobile.any() ) extraHeight = 50;
+		
+		setTimeout(function(){
+			$('#fh5co-main').stop().animate({
+				'height': $('.hei.active').height() + extraHeight + 200
+			});
+		}, 50);//调整下拉速度
+	}
 	var pieChart = function() {
 		$('.chart').easyPieChart({
 			scaleColor: false,
@@ -83,7 +93,11 @@
 				if(data === 3){
 					$('.fh5co-tab-content[data-content="'+data+'"]').find(".fh5co-tab-content:first").addClass('animated fadeInUp active');
 				}
-				getHeight();
+				if(data==3||data==5||data==6){
+					getHeight2();
+				}else{
+					getHeight()
+				}
 			}, 500);
 
 			if ( pie === 'yes' ) {
@@ -99,8 +113,12 @@
 	$(function(){
 		tabContainer();
 		tabClickTrigger();
-
+//		$(".auto-height-btn").click(function(){
+//			autoHeight();
+//		})
 	});
 
-
+	function autoHeight(){
+//		$("#auto-height").height($(".fh5co-tab-wrap .fh5co-tab-content.active").height());
+	}
 }());
